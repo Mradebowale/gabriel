@@ -28,6 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["recruits.up.railway.app"]
 
+SECRET_KEY = config('SECRET_KEY')
+
 
 # Application definition
 
