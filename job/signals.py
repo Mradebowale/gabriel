@@ -5,7 +5,7 @@ from django.core.mail import send_mail, EmailMessage
 from decouple import config
 from django.conf import settings
 from django.template.loader import render_to_string
-
+from decouple import config
 # @receiver(post_save, sender=Applicant)
 # def send_registration_email(sender, instance, created, **kwargs):
 #     if created:
@@ -25,7 +25,7 @@ def send_registration_mail(sender, instance, created, **kwargs):
             'first_name': instance.First_name,
         }
         message = render_to_string('job/modified_email.html', context) 
-        from_email = settings.DEFAULT_FROM_EMAIL
+        from_email = config('DEFAULT_FROM_EMAIL ')
         to_email = [instance.email]
         # send_mail(subject, message, from_email, to_email)
         msg = EmailMessage(subject, message, from_email, to_email)
