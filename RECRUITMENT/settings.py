@@ -142,8 +142,8 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-DEFAULT_FROM_EMAIL = "edwardprosper001@gmail.com"
+DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
 SENDGRID_SANDBOX_MODE_IN_DEBUG = False
-SENDGRID_API_KEY = config("NEW_SENDGRID_API_KEY")
+SENDGRID_API_KEY = config("BEST_SENDGRID_KEY")
 
