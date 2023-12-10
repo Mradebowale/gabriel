@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ["recruits.up.railway.app", 'https://127.0.0.1']
 
 SECRET_KEY = config('SECRET_KEY')
 
-CSRF_TRUSTED_ORIGINS = ['https://recruits.up.railway.app','https://127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://*.recruits.up.railway.app','https://*.127.0.0.1']
 
 # Application definition
 
