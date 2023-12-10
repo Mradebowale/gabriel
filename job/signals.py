@@ -25,7 +25,7 @@ def send_registration_mail(sender, instance, created, **kwargs):
             'first_name': instance.First_name,
         }
         message = render_to_string('job/modified_email.html', context) 
-        from_email = config('DEFAULT_FROM_EMAIL ')
+        from_email = config('DEFAULT_FROM_EMAIL')
         to_email = [instance.email]
         # send_mail(subject, message, from_email, to_email)
         msg = EmailMessage(subject, message, from_email, to_email)
