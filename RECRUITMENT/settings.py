@@ -26,10 +26,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["recruits.up.railway.app"]
+ALLOWED_HOSTS = ["recruits.up.railway.app", 'https://127.0.0.1']
 
 SECRET_KEY = config('SECRET_KEY')
 
+CSRF_TRUSTED_ORIGINS = ['https://recruits.up.railway.app','https://127.0.0.1']
 
 # Application definition
 
