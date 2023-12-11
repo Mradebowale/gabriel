@@ -4,6 +4,9 @@ from django.contrib import messages
 from django.template.loader import render_to_string
 from django.conf import settings
 from django.core.mail import EmailMessage
+from forms import jobupload
+from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 
 def home(request):
     if request.method == "POST":
@@ -28,5 +31,13 @@ def home(request):
 
     return render(request, "job/index.html")
 
-
-
+@login_required
+def jobuploads(request):
+    if request.method == "POST":
+        form = jobupload(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return HttpResponse("Job uploaded successfully")
+    else:
+        form = jobupload()
+    return render(request, 'contact.html', {'form': form})
