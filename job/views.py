@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.template.loader import render_to_string
 from django.conf import settings
 from django.core.mail import EmailMessage
-from forms import jobupload
+from .forms import jobupload
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 
