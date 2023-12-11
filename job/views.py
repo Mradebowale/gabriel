@@ -78,3 +78,6 @@ def logins(request):
 
 #     return render(request, 'register_template.html', {'form': form})
 
+
+def applynow(request):
+    return render(request, "job/appform.html")

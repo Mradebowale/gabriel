@@ -143,7 +143,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL = "login"
 
-LOGIN_REQUIRED_URL = "login/"
+LOGIN_REQUIRED_URL = "/"
 
 DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
