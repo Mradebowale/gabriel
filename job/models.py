@@ -44,14 +44,15 @@ class Applicant(models.Model):
     Home_address = models.CharField(max_length=300)
     city = models.CharField(max_length=100)
     state = models.CharField(max_length=100)
-    zip_code = models.CharField(max_length=10, default="89076")
+    zip_code = models.CharField(max_length=10)
     Phone_number = PhoneNumberField()
     email = models.EmailField()
     Job_aspired = models.CharField(max_length=100,choices=JOB_TYPE)
     Id_document = models.CharField(max_length=100, choices=ID_DOCUMENT_CHOICES)
-    Id_image = models.ImageField(upload_to="Documents", blank=True, null=True)
+    Id_image = models.ImageField(upload_to="Documents")
     Former_workplace = models.CharField(max_length=200, blank=True, null=True)
     Workplace_address = models.TextField(blank=True, null=True)
+    upload = models.FileField(upload_to="resume")
 
 
     def __str__(self):

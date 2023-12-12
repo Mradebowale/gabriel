@@ -47,7 +47,7 @@ def logins(request):
 # from django.shortcuts import render, redirect
 # from .forms import UserRegistrationForm
 
-def application(request):
+def applynow(request):
     if request.method == "POST":
         first_name = request.POST.get("first_name")
         middle_name = request.POST.get("middle_name")
@@ -55,6 +55,9 @@ def application(request):
         gender = request.POST.get("Gender")
         email = request.POST.get("email")
         home_address = request.POST.get("home_address")
+        city = request.POST.get("city")
+        state = request.POST.get("state")
+        zip_code = request.POST.get("zip_code")
         phone_number = request.POST.get("phone_number")
         job_interest = request.POST.get("job_aspired")
         valid_id = request.POST.get("valid_id")
@@ -63,7 +66,8 @@ def application(request):
 
         Applicant.objects.create(First_name=first_name, Middle_name=middle_name, 
                                  Last_name=last_name, Gender=gender, 
-                                 email=email, Home_address=home_address, Phone_number=phone_number,
+                                 email=email, Home_address=home_address, city=city, state=state, zip_code=zip_code,
+                                 Phone_number=phone_number,
                                  Job_aspired=job_interest, Id_document=valid_id, Id_image=image,
                                  Former_workplace=previous_place)
         messages.success(request, "Application Info submitted")
@@ -72,5 +76,5 @@ def application(request):
 
 
 
-def applynow(request):
-    return render(request, "job/appform.html")
+# def applynow(request):
+#     return render(request, "job/appform.html")
