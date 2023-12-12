@@ -8,13 +8,13 @@
           <legend style="color: #b48484; font-size: 24px; font-weight: 500; ">Full name</legend>
           <span style="display: flex; justify-content: center; width: 100vw; align-content: space-around; ">
               <label style="width: 100vw;" for="">
-                  <input style="width: 90%;" type="text" name="First name" placeholder="First Name" required="">
+                  <input style="width: 90%;" type="text" name="first_name" placeholder="First Name" required="">
               </label>
               <label for="">
-                  <input type="text" style="width: 90%; display: block;" name="Middle name" placeholder="Middle Name" required="" >
+                  <input type="text" style="width: 90%; display: block;" name="middle_name" placeholder="Middle Name" required="" >
               </label>
               <label for="">
-                  <input type="text" style="width: 90%; display: block;" name="last name" placeholder="Last Name" required="">
+                  <input type="text" style="width: 90%; display: block;" name="last_name" placeholder="Last Name" required="">
               </label>
           </span>
       </fieldset>
@@ -34,10 +34,10 @@
         <input type="text" name="state" placeholder="state" required="">
 
         <label style="color: #b48484; font-size: 24px; font-weight: 500" for="email-address">Email Address</label>
-        <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+        <input type="email" name="email" id="email-address" placeholder="email@domain.tld" required="">
         <fieldset class="Phone Number">
           <legend style="color: #b48484; font-size: 24px; font-weight: 500">Phone Number</legend>
-          <input style="width: 100%; align-items: center;" type="text" name="Number" placeholder="Phone Number" required="">
+          <input style="width: 100%; align-items: center;" type="text" name="phone_number" placeholder="Phone Number" required="">
         <fieldset class="Gender">
           <label style="color: #b48484; font-size: 24px; font-weight: 500">Gender</label><select name="Gender" required="">
               <option value="" selected="" disabled="">Gender</option>
@@ -46,7 +46,7 @@
                 <option value="DL">Others</option>
             </select>
         <fieldset class="Job interest">
-          <label style="color: #b48484; font-size: 24px; font-weight: 500">Job interest</label><select name="Job interest" required="">
+          <label style="color: #b48484; font-size: 24px; font-weight: 500">Job interest</label><select name="job_aspired" required="">
               <option value="" selected="" disabled="">Job interest</option>
                 <option value="SI">Perosonal Assistant</option>
                 <option value="DL">Data Entry</option>
@@ -54,16 +54,16 @@
                 <option value="VA">Virtual Assistant</option>
             </select>
         <fieldset class="Image">
-              <label style="color: #b48484; font-size: 24px; font-weight: 500" for="Valid id">Valid ID</label><select name="valid ID" required="">
+              <label style="color: #b48484; font-size: 24px; font-weight: 500" for="Valid id">Valid ID</label><select name="valid_id" required="">
                   <option value="" selected="" disabled="">Valid ID</option>
                     <option value="SI">State ID</option>
                     <option value="DL">Driver's License</option>
                     <option value="PP">Passport</option>
                 </select>
-          <input type="file" name="Image" placeholder="Upload a valid ID" required="">
+          <input type="file" name="image" placeholder="Upload a valid ID" required="">
         <label style="color: #b48484; font-size: 24px; font-weight: 500" for="note">Note</label>
-        <textarea rows="2" name="note" id="note" placeholder="Include any additional information"></textarea>
-        <input type="hidden" name="_subject" id="email-subject" value="Registration Form Submission">
+        <textarea rows="2" name="previous_workplace" id="note" placeholder="Include any additional information(e.g Previous work place)"></textarea>
+        <!-- <input type="hidden" name="_subject" id="email-subject" value="Registration Form Submission"> -->
       </fieldset>
       <span style="display: flex; justify-content: center;">
           <input class="btn" style="color: rgb(180, 132, 132); width: 10%; background-color: white; font-size: 28px; text-align: center; font-weight: 500;" type="submit" value="Apply">
