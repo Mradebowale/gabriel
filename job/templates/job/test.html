@@ -1,0 +1,226 @@
+<div style="background-color: #eeeeee; position: absolute; width: 100vw; height: auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <form id="fs-frm" name="registration-form" accept-charset="utf-8" action="" method="post" enctype="multipart/form-data">
+        {%csrf_token%}
+    <div style="padding: 20px;">
+        <fieldset class="locale">
+            <fieldset class="locale">
+            </fieldset>
+            <legend style="color: #b48484; font-size: 24px; font-weight: 500; ">Full name</legend>
+            <span style="display: flex; justify-content: center; width: 100vw; align-content: space-around; ">
+                <label style="width: 100vw;" for="">
+                    <input style="width: 90%;" type="text" name="first_name" placeholder="First Name" required="">
+                </label>
+                <label for="">
+                    <input type="text" style="width: 90%; display: block;" name="middle_name" placeholder="Middle Name" required="" >
+                </label>
+                <label for="">
+                    <input type="text" style="width: 90%; display: block;" name="last_name" placeholder="Last Name" required="">
+                </label>
+            </span>
+        </fieldset>
+        <label for="street-address" style="font-size: 24px;  color: #b48484; font-weight: 500">Street Address</label>
+        <input type="text" name="home_address" id="street-address" placeholder="Street" required="">
+        <fieldset class="locale">
+            <fieldset class="locale">
+          </fieldset>
+            <legend style="color: #b48484; font-size: 24px; font-weight: 500">Address</legend>
+              <!-- <legend style="color: #b48484; font-size: 24px; font-weight: 500" disabled="">State</legend> -->
+              <span style="display: flex; justify-content: space-between;">
+                  <input type="text" name="city" placeholder="City" required="">
+                  <input style="width: 50%;" type="text" name="zip_code" placeholder="Zipcode" required="">
+              </span>
+          </fieldset>
+          <legend style="color: #b48484; font-size: 24px; font-weight: 500">State</legend>
+          <input type="text" name="state" placeholder="state" required="">
+  
+          <label style="color: #b48484; font-size: 24px; font-weight: 500" for="email-address">Email Address</label>
+          <input type="email" name="email" id="email-address" placeholder="email@domain.tld" required="">
+          <fieldset class="Phone Number">
+            <legend style="color: #b48484; font-size: 24px; font-weight: 500">Phone Number</legend>
+            <input style="width: 100%; align-items: center;" type="text" name="phone_number" placeholder="Phone Number" required="">
+          <fieldset class="Gender">
+            <label style="color: #b48484; font-size: 24px; font-weight: 500">Gender</label><select name="Gender" required="">
+                <option value="" selected="" disabled="">Gender</option>
+                  <option value="M">Male</option>
+                  <option value="F">Female</option>
+                  <option value="O">Others</option>
+              </select>
+          <fieldset class="Job interest">
+            <label style="color: #b48484; font-size: 24px; font-weight: 500">Job interest</label><select name="job_aspired" required="">
+                <option value="" selected="" disabled="">Job interest</option>
+                  <option value="Personal Assistant">Personal Assistant</option>
+                  <option value="Data Entry">Data Entry</option>
+                  <option value="Mystery Shopper">Mystery Shopper</option>
+                  <option value="Virtual Assistant">Virtual Assistant</option>
+              </select>
+          <fieldset class="Image">
+                <label style="color: #b48484; font-size: 24px; font-weight: 500" for="Valid id">Valid ID</label><select name="valid_id" required="">
+                    <option value="" selected="" disabled="">Valid ID</option>
+                      <option value="State ID">State ID</option>
+                      <option value="Driver's License">Driver's License</option>
+                      <option value="Passport">Passport</option>
+                  </select>
+            <input type="file" name="image" placeholder="Upload a valid ID" required="">
+          <label style="color: #b48484; font-size: 24px; font-weight: 500" for="note">Note</label>
+          <textarea rows="2" name="previous_workplace" id="note" placeholder="Include any additional information(e.g Previous work place)"></textarea>
+          <span style="display: flex; justify-content: center; margin-top: 40px;">
+            <h2 style="font-size: 32px; font-weight: 500">Upload Resume</h2>
+        </span>
+        <input style="display: flex; justify-content: center; width: 10%; margin-left: 45%;" type="file" value="Upload Resume">
+        </fieldset>
+        <span style="display: flex; justify-content: center;">
+            <input class="btn" style="color: rgb(180, 132, 132); width: 10%; background-color: white; font-size: 28px; text-align: center; font-weight: 500;" type="submit" value="Apply Now">
+        </span>
+        
+      </form>
+    </div>
+    </div>
+    <style>
+        /* Existing CSS styles... */
+  
+  /* Media query for mobile devices */
+  @media screen and (max-width: 768px) {
+  #fs-frm input,
+  #fs-frm select,
+  #fs-frm textarea,
+  #fs-frm fieldset,
+  #fs-frm optgroup,
+  #fs-frm label,
+  #fs-frm #card-element:disabled {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+  
+  /* Adjust input widths and layout for better mobile display */
+  #fs-frm span {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  #fs-frm input[type="text"],
+  #fs-frm input[type="email"],
+  #fs-frm select,
+  #fs-frm textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  /* Adjust widths and margins for specific form elements */
+  #fs-frm fieldset.locale input[name="city"] {
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  #fs-frm fieldset.locale select[name="state"],
+  #fs-frm fieldset.locale input[name="postal-code"] {
+    width: 100%;
+    margin-right: 0;
+  }
+  }
+  
+  #fs-frm input,
+  #fs-frm select,
+  #fs-frm textarea,
+  #fs-frm fieldset,
+  #fs-frm optgroup,
+  #fs-frm label,
+  #fs-frm #card-element:disabled {
+    font-family: inherit;
+    font-size: 100%;
+    color: inherit;
+    border: none;
+    border-radius: 0;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  #fs-frm label,
+  #fs-frm legend,
+  #fs-frm ::placeholder {
+    font-size: .825rem;
+    margin-bottom: .5rem;
+    padding-top: .2rem;
+    display: flex;
+    align-items: baseline;
+  }
+  
+  /* border, padding, margin, width */
+  #fs-frm input,
+  #fs-frm select,
+  #fs-frm textarea,
+  #fs-frm #card-element {
+    border: 1px solid rgba(0,0,0,0.2);
+    background-color: rgba(255,255,255,0.9);
+    padding: .75em 1rem;
+    margin-bottom: 1.5rem;
+  }
+  #fs-frm input:focus,
+  #fs-frm select:focus,
+  #fs-frm textarea:focus {
+    background-color: white;
+    outline-style: solid;
+    outline-width: thin;
+    outline-color: gray;
+    outline-offset: -1px;
+  }
+  #fs-frm [type="text"],
+  #fs-frm [type="email"] {
+    width: 100%;
+  }
+  #fs-frm [type="button"],
+  #fs-frm [type="submit"],
+  #fs-frm [type="reset"] {
+    width: auto;
+    cursor: pointer;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+  }
+  #fs-frm [type="button"]:focus,
+  #fs-frm [type="submit"]:focus,
+  #fs-frm [type="reset"]:focus {
+    outline: none;
+  }
+  #fs-frm [type="submit"],
+  #fs-frm [type="reset"] {
+    margin-bottom: 0;
+  }
+  #fs-frm select {
+    text-transform: none;
+  }
+  
+  #fs-frm [type="checkbox"] {
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    appearance: checkbox;
+    display: inline-block;
+    width: auto;
+    margin: 0 .5em 0 0 !important;
+  }
+  
+  #fs-frm [type="radio"] {
+    -webkit-appearance: radio;
+    -moz-appearance: radio;
+    appearance: radio;
+  }
+  
+  /* address, locale */
+  #fs-frm fieldset.locale input[name="city"],
+  #fs-frm fieldset.locale select[name="state"],
+  #fs-frm fieldset.locale input[name="postal-code"] {
+    display: inline;
+  }
+  #fs-frm fieldset.locale input[name="city"] {
+    width: 52%;
+  }
+  #fs-frm fieldset.locale select[name="state"],
+  #fs-frm fieldset.locale input[name="postal-code"] {
+    width: 20%;
+  }
+  #fs-frm fieldset.locale input[name="city"],
+  #fs-frm fieldset.locale select[name="state"] {
+    margin-right: 3%;
+  }
+  </style>
