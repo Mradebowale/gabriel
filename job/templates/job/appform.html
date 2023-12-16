@@ -65,95 +65,14 @@
       </div>
     </div>
 
-
-
-    <div style="background-color: #eeeeee; position: absolute; width: 100vw; height: auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-      <form id="fs-frm" name="registration-form" accept-charset="utf-8" action="" method="post" enctype="multipart/form-data">
-          {%csrf_token%}
-      <div style="padding: 20px;">
-          <fieldset class="locale">
-              <fieldset class="locale">
-              </fieldset>
-              <legend style="color: #b48484; font-size: 24px; font-weight: 500; ">Full name</legend>
-              <span style="display: flex; justify-content: center; width: 100vw; align-content: space-around; ">
-                  <label style="width: 100vw;" for="">
-                      <input style="width: 90%;" type="text" name="first_name" placeholder="First Name" required="">
-                  </label>
-                  <label for="">
-                      <input type="text" style="width: 90%; display: block;" name="middle_name" placeholder="Middle Name" required="" >
-                  </label>
-                  <label for="">
-                      <input type="text" style="width: 90%; display: block;" name="last_name" placeholder="Last Name" required="">
-                  </label>
-              </span>
-          </fieldset>
-          <label for="street-address" style="font-size: 24px;  color: #b48484; font-weight: 500">Street Address</label>
-          <input type="text" name="home_address" id="street-address" placeholder="Street" required="">
-          <fieldset class="locale">
-              <fieldset class="locale">
-            </fieldset>
-              <legend style="color: #b48484; font-size: 24px; font-weight: 500">Address</legend>
-                <!-- <legend style="color: #b48484; font-size: 24px; font-weight: 500" disabled="">State</legend> -->
-                <span style="display: flex; justify-content: space-between;">
-                    <input type="text" name="city" placeholder="City" required="">
-                    <input style="width: 50%;" type="text" name="zip_code" placeholder="Zipcode" required="">
-                </span>
-            </fieldset>
-            <legend style="color: #b48484; font-size: 24px; font-weight: 500">State</legend>
-            <input type="text" name="state" placeholder="state" required="">
-    
-            <label style="color: #b48484; font-size: 24px; font-weight: 500" for="email-address">Email Address</label>
-            <input type="email" name="email" id="email-address" placeholder="email@domain.tld" required="">
-            <fieldset class="Phone Number">
-              <legend style="color: #b48484; font-size: 24px; font-weight: 500">Phone Number</legend>
-              <input style="width: 100%; align-items: center;" type="text" name="phone_number" placeholder="Phone Number" required="">
-            <fieldset class="Gender">
-              <label style="color: #b48484; font-size: 24px; font-weight: 500">Gender</label><select name="Gender" required="">
-                  <option value="" selected="" disabled="">Gender</option>
-                    <option value="M">Male</option>
-                    <option value="F">Female</option>
-                    <option value="O">Others</option>
-                </select>
-            <fieldset class="Job interest">
-              <label style="color: #b48484; font-size: 24px; font-weight: 500">Job interest</label><select name="job_aspired" required="">
-                  <option value="" selected="" disabled="">Job interest</option>
-                    <option value="Personal Assistant">Personal Assistant</option>
-                    <option value="Data Entry">Data Entry</option>
-                    <option value="Mystery Shopper">Mystery Shopper</option>
-                    <option value="Virtual Assistant">Virtual Assistant</option>
-                </select>
-            <fieldset class="Image">
-                  <label style="color: #b48484; font-size: 24px; font-weight: 500" for="Valid id">Valid ID</label><select name="valid_id" required="">
-                      <option value="" selected="" disabled="">Valid ID</option>
-                        <option value="State ID">State ID</option>
-                        <option value="Driver's License">Driver's License</option>
-                        <option value="Passport">Passport</option>
-                    </select>
-              <input type="file" name="image" placeholder="Upload a valid ID" required="">
-            <label style="color: #b48484; font-size: 24px; font-weight: 500" for="note">Note</label>
-            <textarea rows="2" name="previous_workplace" id="note" placeholder="Include any additional information(e.g Previous work place)"></textarea>
-            <span style="display: flex; justify-content: center; margin-top: 40px;">
-              <h2 style="font-size: 32px; font-weight: 500">Upload Resume</h2>
-          </span>
-          <input style="display: flex; justify-content: center; width: 10%; margin-left: 45%;" type="file" value="Upload Resume">
-          </fieldset>
-          <span style="display: flex; justify-content: center;">
-              <input class="btn" style="color: rgb(180, 132, 132); width: 10%; background-color: white; font-size: 28px; text-align: center; font-weight: 500;" type="submit" value="Apply Now">
-          </span>
-          
-        </form>
-      </div>
-      </div>
-      <style>
-
-		<!-- <section class="ftco-section contact-section bg-light">
+		<section class="ftco-section contact-section bg-light">
       <div class="container">
         <div class="row d-flex mb-5 contact-info">
           <div class="col-md-12 mb-4">
             <h2 class="h3">Contact Information</h2>
           </div>
           <div class="w-100"></div>
-          <div class="col-md-3">
+          <!-- <div class="col-md-3">
             <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
           </div>
           <div class="col-md-3">
@@ -165,7 +84,8 @@
           <div class="col-md-3">
             <p><span>Website</span> <a href="#">yoursite.com</a></p>
           </div>
-        </div>
+        </div> -->
+        
         <div class="row block-9">
           <div class="col-md-6 order-md-last d-flex">
             <form action="#" class="bg-white p-5 contact-form">
@@ -193,7 +113,7 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
